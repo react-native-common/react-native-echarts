@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { WebView, View, StyleSheet } from 'react-native';
 import renderChart from './renderChart';
+import tpl from './tpl.html'
 import echarts from './echarts.min';
 
 export default class App extends Component {
@@ -20,7 +21,7 @@ export default class App extends Component {
           style={{
             height: this.props.height || 400,
           }}
-          source={require('./tpl.html')}
+          source={tpl}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
         />
       </View>
