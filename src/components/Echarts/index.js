@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { WebView, View, StyleSheet } from 'react-native';
+import { WebView, View, StyleSheet,Platform} from 'react-native';
 import renderChart from './renderChart';
 import echarts from './echarts.min';
 const source = (Platform.OS === 'ios')||__DEV__? require('./tpl.html') : {'uri':'file:///android_asset/echarts/tpl.html'}
